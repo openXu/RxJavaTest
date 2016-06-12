@@ -4,8 +4,10 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import rx.Notification;
@@ -25,7 +27,7 @@ import rx.schedulers.Timestamped;
  * created time : 16/6/6 下午7:34
  * blog : http://blog.csdn.net/xmxkf
  * github : http://blog.csdn.net/xmxkf
- * class name : TransformOperators
+ * class name : HelpOperators
  *
  * discription : 辅助操作符
  *
@@ -496,6 +498,41 @@ public class HelpOperators extends OperatorsBase {
                     @Override
                     public void onNext(List<Long> longs) {
                         Log.v(TAG, "onNext:" + longs+" ->"+ sdf.format(new Date()));
+                    }
+                });
+
+        Observable.just(2,4,1,3)
+                .delaySubscription(5, TimeUnit.SECONDS)  //延迟5s订阅
+                .toSortedList()
+                .subscribe(new Action1<List<Integer>>() {
+                    @Override
+                    public void call(List<Integer> integers) {
+                        Log.v(TAG, "toSortedList onNext:" + integers);
+                    }
+                });
+
+        Observable.just(2,4,1,3)
+                .delaySubscription(7, TimeUnit.SECONDS)  //延迟5s订阅
+                .toMultimap(new Func1<Integer, String>() {
+                    //生成map的key
+                    @Override
+                    public String call(Integer integer) {
+                        return integer % 2 == 0 ? "偶" : "奇";
+                    }
+                }, new Func1<Integer, String>() {
+                    //转换原始数据项到Map存储的值（默认数据项本身就是值）
+                    @Override
+                    public String call(Integer integer) {
+                        return integer%2==0?"偶"+integer : "奇"+integer;
+                    }
+                })
+                .subscribe(new Action1<Map<String, Collection<String>>>() {
+                    @Override
+                    public void call(Map<String, Collection<String>> stringCollectionMap) {
+                        Collection<String> o = stringCollectionMap.get("偶");
+                        Collection<String> j = stringCollectionMap.get("奇");
+                        Log.v(TAG, "toMultimap onNext:" + o);
+                        Log.v(TAG, "toMultimap onNext:" + j);
                     }
                 });
 

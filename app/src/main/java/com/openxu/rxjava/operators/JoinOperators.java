@@ -18,7 +18,7 @@ import rx.schedulers.Schedulers;
  * created time : 16/6/6 下午7:34
  * blog : http://blog.csdn.net/xmxkf
  * github : http://blog.csdn.net/xmxkf
- * class name : TransformOperators
+ * class name : JoinOperators
  *
  * discription : 结合操作符
  *

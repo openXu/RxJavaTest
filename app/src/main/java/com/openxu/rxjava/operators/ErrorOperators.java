@@ -14,7 +14,7 @@ import rx.functions.Func1;
  * created time : 16/6/6 下午7:34
  * blog : http://blog.csdn.net/xmxkf
  * github : http://blog.csdn.net/xmxkf
- * class name : TransformOperators
+ * class name : ErrorOperators
  *
  * discription :错误处理操作符
  *

@@ -49,7 +49,7 @@ public class OperatorsActivity extends AppCompatActivity {
 
     private String[] groupList;
     private List<String[]> childLists;
-    private int EXPAND_GROUP = 5;
+    private int EXPAND_GROUP = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

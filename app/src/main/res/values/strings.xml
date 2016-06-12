@@ -87,7 +87,7 @@
     <array name="operators_boolean">
         <item>All</item>
         <item>Amb</item>
-        <item>Contains</item>
+        <item>Contains/isEmpty/exists</item>
         <item>DefaultIfEmpty</item>
         <item>SequenceEqual</item>
         <item>SkipUntil</item>
