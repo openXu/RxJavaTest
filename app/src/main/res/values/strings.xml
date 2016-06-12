@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">RxJavaTest</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <array name="operators_list">
+        <item>创建操作</item>
+        <item>变换操作</item>
+        <item>过滤操作</item>
+        <item>组合操作</item>
+        <item>错误处理</item>
+        <item>辅助操作</item>
+        <item>条件和布尔操作</item>
+        <item>算术和集合操作</item>
+        <item>转换操作</item>
+        <item>连接操作</item>
+        <item>错误处理</item>
+        <item>反压操作</item>
+    </array>
+    <!--创建操作-->
+    <array name="operators_create">
+        <item>Create</item>
+        <item>Defer</item>
+        <item>Empty/Never/Throw</item>
+        <item>From</item>
+        <item>Interval</item>
+        <item>Just</item>
+        <item>Range</item>
+        <item>Repeat</item>
+       <!-- <item>Start</item>-->
+        <item>Timer</item>
+    </array>
+    <!--变换操作-->
+    <array name="operators_change">
+        <item>Buffer</item>
+        <item>FlatMap</item>
+        <item>GroupBy</item>
+        <item>Map</item>
+        <item>Scan</item>
+        <item>Window</item>
+    </array>
+    <!--过滤操作-->
+    <array name="operators_filter">
+        <item>Debounce</item>
+        <item>Distinct</item>
+        <item>ElementAt</item>
+        <item>Filter</item>
+        <item>First</item>
+        <item>IgnoreElements</item>
+        <item>Last</item>
+        <item>Sample</item>
+        <item>Skip</item>
+        <item>SkipLast</item>
+        <item>Take</item>
+        <item>TakeLast</item>
+    </array>
+    <!--组合操作-->
+    <array name="operators_group">
+   <!--     <item>And/Then/When</item>-->
+        <item>CombineLatest</item>
+        <item>Join</item>
+        <item>Merge</item>
+        <item>StartWith</item>
+        <item>Switch</item>
+        <item>Zip</item>
+    </array>
+    <!--错误处理-->
+    <array name="operators_error">
+        <item>Catch</item>
+        <item>Retry</item>
+        </array>
+    <!--辅助操作-->
+    <array name="operators_assist">
+        <item>Delay</item>
+        <item>Do</item>
+        <item>Materialize/Dematerialize</item>
+        <item>ObserveOn</item>
+        <item>Serialize</item>
+        <item>Subscribe</item>
+        <item>SubscribeOn</item>
+        <item>TimeInterval</item>
+        <item>Timeout</item>
+        <item>Timestamp</item>
+        <item>Using</item>
+    </array>
+
+    <!--条件和布尔操作-->
+    <array name="operators_boolean">
+        <item>All</item>
+        <item>Amb</item>
+        <item>Contains</item>
+        <item>DefaultIfEmpty</item>
+        <item>SequenceEqual</item>
+        <item>SkipUntil</item>
+        <item>SkipWhile</item>
+        <item>TakeUntil</item>
+        <item>TakeWhile</item>
+    </array>
+    <!--算术和集合操作-->
+    <array name="operators_math">
+        <item>Average</item>
+        <item>Concat</item>
+        <item>Count</item>
+        <item>Max</item>
+        <item>Min</item>
+        <item>Reduce</item>
+        <item>Sum</item>
+    </array>
+    <!--转换操作-->
+    <array name="operators_to">
+        <item>To</item>
+    </array>
+    <!--连接操作-->
+    <array name="operators_connect">
+        <item>Connect</item>
+        <item>Publish</item>
+        <item>RefCount</item>
+        <item>Replay</item>
+    </array>
+    <!--反压操作-->
+    <array name="operators_fy">
+    </array>
+
+</resources>
