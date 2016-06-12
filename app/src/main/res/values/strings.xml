@@ -73,14 +73,14 @@
         <item>Delay</item>
         <item>Do</item>
         <item>Materialize/Dematerialize</item>
-        <item>ObserveOn</item>
-        <item>Serialize</item>
-        <item>Subscribe</item>
-        <item>SubscribeOn</item>
+        <item>ObserveOn/SubscribeOn</item>
+<!--        <item>Serialize</item>
+        <item>Subscribe</item>-->
         <item>TimeInterval</item>
         <item>Timeout</item>
         <item>Timestamp</item>
         <item>Using</item>
+        <item>To</item>
     </array>
 
     <!--条件和布尔操作-->
