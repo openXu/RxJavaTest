@@ -27,6 +27,7 @@ public class OperatorsBase {
         list.add("com.openxu.rxjava.operators.ErrorOperators");
         list.add("com.openxu.rxjava.operators.HelpOperators");
         list.add("com.openxu.rxjava.operators.BoolOperators");
+        list.add("com.openxu.rxjava.operators.MathOperators");
     }
 
     public OperatorsBase(){

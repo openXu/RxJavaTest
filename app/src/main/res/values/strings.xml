@@ -97,15 +97,15 @@
     </array>
     <!--算术和集合操作-->
     <array name="operators_math">
-        <item>Average</item>
-        <item>Concat</item>
-        <item>Count</item>
-        <item>Max</item>
-        <item>Min</item>
-        <item>Reduce</item>
-        <item>Sum</item>
-    </array>
-    <!--转换操作-->
+    <!-- <item>Average</item>-->
+    <item>Concat</item>
+    <item>Count</item>
+    <!-- <item>Max</item>
+     <item>Min</item>-->
+     <item>Reduce</item>
+    <!--  <item>Sum</item>-->
+</array>
+<!--转换操作-->
     <array name="operators_to">
         <item>To</item>
     </array>
