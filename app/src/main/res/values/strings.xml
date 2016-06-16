@@ -11,10 +11,7 @@
         <item>辅助操作</item>
         <item>条件和布尔操作</item>
         <item>算术和集合操作</item>
-        <item>转换操作</item>
         <item>连接操作</item>
-        <item>错误处理</item>
-        <item>反压操作</item>
     </array>
     <!--创建操作-->
     <array name="operators_create">
@@ -105,19 +102,12 @@
      <item>Reduce</item>
     <!--  <item>Sum</item>-->
 </array>
-<!--转换操作-->
-    <array name="operators_to">
-        <item>To</item>
-    </array>
     <!--连接操作-->
     <array name="operators_connect">
         <item>Connect</item>
         <item>Publish</item>
         <item>RefCount</item>
         <item>Replay</item>
-    </array>
-    <!--反压操作-->
-    <array name="operators_fy">
     </array>
 
 </resources>

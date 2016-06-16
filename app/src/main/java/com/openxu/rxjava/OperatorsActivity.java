@@ -49,7 +49,7 @@ public class OperatorsActivity extends AppCompatActivity {
 
     private String[] groupList;
     private List<String[]> childLists;
-    private int EXPAND_GROUP = 6;
+    private int EXPAND_GROUP = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +68,7 @@ public class OperatorsActivity extends AppCompatActivity {
         childLists.add(mContext.getResources().getStringArray(R.array.operators_assist));//辅助操作
         childLists.add(mContext.getResources().getStringArray(R.array.operators_boolean));//条件和布尔操作
         childLists.add(mContext.getResources().getStringArray(R.array.operators_math));//算术和集合操作
-        childLists.add(mContext.getResources().getStringArray(R.array.operators_to));//转换操作
         childLists.add(mContext.getResources().getStringArray(R.array.operators_connect));//连接操作
-        childLists.add(mContext.getResources().getStringArray(R.array.operators_fy));//反压操作
 
         exList.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
