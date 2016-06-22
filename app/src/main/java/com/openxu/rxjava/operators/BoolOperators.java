@@ -9,7 +9,6 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
 import rx.functions.Func1;
-import rx.functions.FuncN;
 
 /**
  *  author : openXu
@@ -61,7 +60,7 @@ import rx.functions.FuncN;
                     @Override
                     public Boolean call(Integer integer) {
                         Log.v(TAG, ""+integer);
-                        return integer<3;
+                        return integer<3;    //判断是不是发射的所有数据都小于3
                     }
                 }).subscribe(new Subscriber<Boolean>() {
             @Override
