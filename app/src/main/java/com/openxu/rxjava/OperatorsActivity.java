@@ -49,7 +49,7 @@ public class OperatorsActivity extends AppCompatActivity {
 
     private String[] groupList;
     private List<String[]> childLists;
-    private int EXPAND_GROUP = 8;
+    private int EXPAND_GROUP = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class OperatorsActivity extends AppCompatActivity {
                     }
                 });
         exList.setAdapter(new MyAdapter(mContext));
-        exList.expandGroup(EXPAND_GROUP);
+//        exList.expandGroup(EXPAND_GROUP);
     }
 
     private class MyAdapter extends BaseExpandableListAdapter {

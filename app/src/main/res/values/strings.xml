@@ -23,7 +23,7 @@
         <item>Just</item>
         <item>Range</item>
         <item>Repeat</item>
-       <!-- <item>Start</item>-->
+        <!-- <item>Start</item>-->
         <item>Timer</item>
     </array>
     <!--变换操作-->
@@ -52,7 +52,7 @@
     </array>
     <!--组合操作-->
     <array name="operators_group">
-   <!--     <item>And/Then/When</item>-->
+        <!--     <item>And/Then/When</item>-->
         <item>CombineLatest</item>
         <item>Join</item>
         <item>Merge</item>
@@ -64,14 +64,14 @@
     <array name="operators_error">
         <item>Catch</item>
         <item>Retry</item>
-        </array>
+    </array>
     <!--辅助操作-->
     <array name="operators_assist">
         <item>Delay</item>
         <item>Do</item>
         <item>Materialize/Dematerialize</item>
         <item>ObserveOn/SubscribeOn</item>
-<!--        <item>Serialize</item>
+        <!--        <item>Serialize</item>
         <item>Subscribe</item>-->
         <item>TimeInterval</item>
         <item>Timeout</item>
@@ -94,14 +94,14 @@
     </array>
     <!--算术和集合操作-->
     <array name="operators_math">
-    <!-- <item>Average</item>-->
-    <item>Concat</item>
-    <item>Count</item>
-    <!-- <item>Max</item>
+        <!-- <item>Average</item>-->
+        <item>Concat</item>
+        <item>Count</item>
+        <!-- <item>Max</item>
      <item>Min</item>-->
-     <item>Reduce</item>
-    <!--  <item>Sum</item>-->
-</array>
+        <item>Reduce</item>
+        <!--  <item>Sum</item>-->
+    </array>
     <!--连接操作-->
     <array name="operators_connect">
         <item>Connect</item>
