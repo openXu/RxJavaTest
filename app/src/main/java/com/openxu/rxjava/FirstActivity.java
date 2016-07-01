@@ -36,6 +36,8 @@ public class FirstActivity extends AppCompatActivity {
     Button btn4;
     @Bind(R.id.btn_5)
     Button btn_5;
+    @Bind(R.id.btn_6)
+    Button btn_6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,7 @@ public class FirstActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5})
+    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_1:
@@ -64,6 +66,9 @@ public class FirstActivity extends AppCompatActivity {
                 break;
             case R.id.btn_5:
                 startActivity(new Intent(mContext, CustomOperatorsActivity.class));
+                break;
+            case R.id.btn_6:
+                startActivity(new Intent(mContext, SchedulerActivity.class));
                 break;
         }
     }

@@ -9,13 +9,13 @@
         android:id="@+id/btn_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="初步探索" />
+        android:text="调度器体验" />
 
     <Button
         android:id="@+id/btn_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="简化代码" />
+        android:text="多次subscribeOn" />
 
     <Button
         android:id="@+id/btn_3"

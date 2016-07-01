@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".OperatorsActivity" />
-        <activity android:name=".CustomOperatorsActivity"></activity>
+        <activity android:name=".CustomOperatorsActivity" />
+        <activity android:name=".SchedulerActivity"></activity>
     </application>
 
 </manifest>
