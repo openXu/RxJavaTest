@@ -21,23 +21,7 @@
         android:id="@+id/btn_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="操作符初体验" />
+        android:text="observeOn" />
 
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="操作符" />
-    <Button
-        android:id="@+id/btn_5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义操作符" />
-
-    <Button
-        android:id="@+id/btn_6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="多线程Scheduler" />
 
 </LinearLayout>
