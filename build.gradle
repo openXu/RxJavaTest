@@ -2,20 +2,21 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'me.tatarka:gradle-retrolambda:3.2.5'
     }
 }
 
-// Required because retrolambda is on maven central
-repositories {
-    mavenCentral()
-}
+
+
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()// Required because retrolambda is on maven central
+        google()
     }
 }
 

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RxJavaImpl-RxJavaTest.iml" filepath="$PROJECT_DIR$/.idea/modules/RxJavaImpl-RxJavaTest.iml" group="RxJavaTest" />
       <module fileurl="file://$PROJECT_DIR$/RxJavaTest.iml" filepath="$PROJECT_DIR$/RxJavaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RxJavaTest-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RxJavaTest-app.iml" group="RxJavaTest/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

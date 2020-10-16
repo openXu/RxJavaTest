@@ -2,7 +2,7 @@ package com.openxu.rxjava;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,14 +10,16 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
+import com.openxu.rxjava.databinding.ActivityMainBinding;
+import com.openxu.rxjava.databinding.ActivityOperatorsBinding;
 import com.openxu.rxjava.operators.OperatorsBase;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 /**
  * RxJava －－（二.操作符）
@@ -42,8 +44,6 @@ public class OperatorsActivity extends AppCompatActivity {
 
     private String TAG = "OperatorsActivity";
 
-    @Bind(R.id.ex_list)
-    ExpandableListView exList;
 
     private Context mContext;
 
@@ -54,9 +54,7 @@ public class OperatorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_operators);
-        ButterKnife.bind(this);
-
+        ActivityOperatorsBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_operators);
         mContext = this;
         groupList = mContext.getResources().getStringArray(R.array.operators_list);  //分组
         childLists = new ArrayList<>();
@@ -70,19 +68,19 @@ public class OperatorsActivity extends AppCompatActivity {
         childLists.add(mContext.getResources().getStringArray(R.array.operators_math));//算术和集合操作
         childLists.add(mContext.getResources().getStringArray(R.array.operators_connect));//连接操作
 
-        exList.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+        binding.exList.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
                     @Override
                     public void onGroupExpand(int groupPosition) {
-                        for (int i = 0, count = exList
+                        for (int i = 0, count = binding.exList
                                 .getExpandableListAdapter().getGroupCount(); i < count; i++) {
                             if (groupPosition != i) {// 关闭其他分组
-                                exList.collapseGroup(i);
+                                binding.exList.collapseGroup(i);
                             }
                         }
                     }
                 });
-        exList.setAdapter(new MyAdapter(mContext));
+        binding.exList.setAdapter(new MyAdapter(mContext));
 //        exList.expandGroup(EXPAND_GROUP);
     }
 
@@ -160,6 +158,7 @@ public class OperatorsActivity extends AppCompatActivity {
                 methodStr = methodStr.replaceAll("/", "_");
                 try {
                     OperatorsBase operators = OperatorsBase.getOperators(i);
+                    Log.w(TAG, "执行"+operators+"."+methodStr+"()");
                     Method method = operators.getClass().getDeclaredMethod(methodStr, TextView.class);
                     method.setAccessible(true);// 调用private方法的关键一句话
                     method.invoke(operators, holder.tv_text);

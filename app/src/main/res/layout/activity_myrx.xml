@@ -7,22 +7,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp">
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="创建操作符" />
+
 
     <Button
-        android:id="@+id/btn_2"
+        android:id="@+id/btn_myrx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="lift" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="compose" />
+        android:text="自定义Rx" />
 </LinearLayout>
 </layout>

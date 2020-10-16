@@ -2,16 +2,17 @@ package com.openxu.rxjava;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.openxu.rxjava.databinding.ActivityOperatorsBinding;
+import com.openxu.rxjava.databinding.ActivitySchedulerBinding;
+
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -21,34 +22,16 @@ public class SchedulerActivity extends AppCompatActivity {
     private Context mContext;
     private String TAG;
 
-    @Bind(R.id.btn_1)
-    Button btn1;
-    @Bind(R.id.btn_2)
-    Button btn2;
-    @Bind(R.id.btn_3)
-    Button btn3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheduler);
+        ActivitySchedulerBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_scheduler);
+        binding.btn1.setOnClickListener(v->scheduler1());
+        binding.btn2.setOnClickListener(v->moreSubscribeOn());
+        binding.btn3.setOnClickListener(v->observeOn());
         TAG = "SchedulerActivity";
         mContext = this;
-        ButterKnife.bind(this);
-    }
-
-    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_1:
-                scheduler1();
-                break;
-            case R.id.btn_2:
-                moreSubscribeOn();
-                break;
-            case R.id.btn_3:
-                observeOn();
-                break;
-        }
     }
 
     private void logThread(Object obj, Thread thread){

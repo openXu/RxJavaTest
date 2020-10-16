@@ -3,15 +3,13 @@ package com.openxu.rxjava;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import com.openxu.rxjava.databinding.ActivityMainBinding;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
@@ -26,51 +24,19 @@ public class FirstActivity extends AppCompatActivity {
 
     private Context mContext;
 
-    @Bind(R.id.btn_1)
-    Button btn1;
-    @Bind(R.id.btn_2)
-    Button btn2;
-    @Bind(R.id.btn_3)
-    Button btn3;
-    @Bind(R.id.btn_4)
-    Button btn4;
-    @Bind(R.id.btn_5)
-    Button btn_5;
-    @Bind(R.id.btn_6)
-    Button btn_6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //Activity中通过DataBindingUtil.setContentView()设置布局获取绑定类实例对象(代替原来的setContentView(getContentView(id));)
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.btn1.setOnClickListener(v->rx_1());
+        binding.btn2.setOnClickListener(v->rx_2());
+        binding.btn3.setOnClickListener(v->rx_3());
+        binding.btn4.setOnClickListener(v->startActivity(new Intent(mContext, OperatorsActivity.class)));
+        binding.btn5.setOnClickListener(v->startActivity(new Intent(mContext, CustomOperatorsActivity.class)));
+        binding.btn6.setOnClickListener(v->startActivity(new Intent(mContext, SchedulerActivity.class)));
+        binding.btnMyrx.setOnClickListener(v->startActivity(new Intent(mContext, MyRxActivity.class)));
         mContext = this;
-        ButterKnife.bind(this);
-
-
-    }
-
-
-    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_1:
-                rx_1();
-                break;
-            case R.id.btn_2:
-                rx_2();
-                break;
-            case R.id.btn_3:
-                rx_3();
-                break;
-            case R.id.btn_4:
-                startActivity(new Intent(mContext, OperatorsActivity.class));
-                break;
-            case R.id.btn_5:
-                startActivity(new Intent(mContext, CustomOperatorsActivity.class));
-                break;
-            case R.id.btn_6:
-                startActivity(new Intent(mContext, SchedulerActivity.class));
-                break;
-        }
     }
 
     private void showToast(String s){

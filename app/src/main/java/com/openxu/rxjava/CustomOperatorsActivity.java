@@ -2,17 +2,18 @@ package com.openxu.rxjava;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.openxu.rxjava.databinding.ActivityCustomOperatorsBinding;
+import com.openxu.rxjava.databinding.ActivitySchedulerBinding;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -30,34 +31,14 @@ public class CustomOperatorsActivity extends AppCompatActivity {
     private Context mContext;
     private String TAG = "CustomOperatorsActivity";
 
-    @Bind(R.id.btn_1)
-    Button btn1;
-    @Bind(R.id.btn_2)
-    Button btn2;
-    @Bind(R.id.btn_3)
-    Button btn3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_operators);
+        ActivityCustomOperatorsBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_custom_operators);
+        binding.btn1.setOnClickListener(v->CustomCreate());
+        binding.btn2.setOnClickListener(v->CustomList());
+        binding.btn3.setOnClickListener(v->CustomCompose());
         mContext = this;
-        ButterKnife.bind(this);
-    }
-
-
-    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_1:
-                CustomCreate();
-                break;
-            case R.id.btn_2:
-                CustomList();
-                break;
-            case R.id.btn_3:
-                CustomCompose();
-                break;
-        }
     }
 
     private void CustomCreate(){

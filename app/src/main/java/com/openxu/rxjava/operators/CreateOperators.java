@@ -38,7 +38,6 @@ import rx.functions.Action1;
  */
 public class CreateOperators extends OperatorsBase {
 
-
     /**
      * ①. 使用Create操作符从头开始创建一个Observable，给这个操作符传递一个接受观察者作为参数的函数，编写这个函数让它的行为表现为一个Observable：恰当的调用观察者的onNext，onError和onCompleted方法；
      * ②. 一个形式正确的有限Observable必须尝试调用观察者的onCompleted正好一次或者它的onError正好一次，而且此后不能再调用观察者的任何其它方法；

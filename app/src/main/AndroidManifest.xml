@@ -15,6 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MyRxActivity" />
         <activity android:name=".OperatorsActivity" />
         <activity android:name=".CustomOperatorsActivity" />
         <activity android:name=".SchedulerActivity"></activity>

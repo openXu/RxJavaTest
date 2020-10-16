@@ -162,7 +162,7 @@ public class HelpOperators extends OperatorsBase {
                     @Override
                     public void call(Notification<? super Integer> notification) {
                         Log.v(TAG,"-->doOnEach: " +notification.getKind()+":"+ notification.getValue());
-                        if( (int)notification.getValue() > 1 ) {
+                        if(Integer.parseInt(notification.getValue().toString()) > 1 ) {
                             throw new RuntimeException( "Item exceeds maximum value" );
                         }
                     }
