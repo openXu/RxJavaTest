@@ -6,7 +6,7 @@ package com.openxu.rxjava.myrx;
  * class: ObservableCreate
  * Description: 具体的被观察者实现
  */
-public class ObservableCreate<T> extends Observable {
+public class ObservableCreate<T> extends Observable<T> {
 
     ObservableOnSubscribe<T> source;
 
@@ -15,14 +15,14 @@ public class ObservableCreate<T> extends Observable {
     }
 
     @Override
-    protected void subscribeActual(Observer observer) {
-        observer.onSubscribe();   //订阅开始
+    protected void subscribeActual(Observer<? super T> observer) {
+        observer.onSubscribe();   //订阅回调
+        //暴露给程序员编写业务代码，并发送数据给观察者
         source.subscribe(new CreateEmitter(observer));
     }
 
     static final class CreateEmitter<T> implements Emitter<T>{
         final Observer<T> observer;
-
         public CreateEmitter(Observer<T> observer) {
             this.observer = observer;
         }

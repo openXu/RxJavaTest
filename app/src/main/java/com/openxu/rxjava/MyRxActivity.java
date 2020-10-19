@@ -30,10 +30,6 @@ public class MyRxActivity extends AppCompatActivity {
         //Activity中通过DataBindingUtil.setContentView()设置布局获取绑定类实例对象(代替原来的setContentView(getContentView(id));)
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_myrx);
 
-
-
-
-
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(Emitter<String> emitter) {

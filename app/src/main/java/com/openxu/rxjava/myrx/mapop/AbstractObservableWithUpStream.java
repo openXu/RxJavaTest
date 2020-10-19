@@ -5,7 +5,7 @@ import com.openxu.rxjava.myrx.Observable;
 import com.openxu.rxjava.myrx.ObservableSource;
 
 /**
- * 装饰类
+ * 被观察者的装饰类
  * T : 上游事件类型
  * U ：下游事件类型
  */

@@ -5,11 +5,11 @@ import com.openxu.rxjava.myrx.Observer;
 
 public abstract class BasicFuseableObserver<T,U> implements Observer<T> {
 
-    protected final Observer<U> actual;
+    protected final Observer<U> downstream;
 
-    //参数actual就是下游的observer
-    public BasicFuseableObserver(Observer<U> actual) {
-        this.actual = actual;
+    //参数downstream就是下游的observer
+    public BasicFuseableObserver(Observer<U> downstream) {
+        this.downstream = downstream;
     }
 
     @Override

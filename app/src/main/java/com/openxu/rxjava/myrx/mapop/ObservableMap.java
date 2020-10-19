@@ -26,11 +26,10 @@ public class ObservableMap<T,U> extends AbstractObservableWithUpStream<T,U> {
             super(actual);
             this.mapper = mapper;
         }
-
         @Override
         public void onNext(T t) {
             U apply=mapper.apply(t);
-            actual.onNext(apply);
+            downstream.onNext(apply);
         }
     }
 }
